@@ -1,37 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>ATC Roster Management</title>
   <style>
-    body {
+    /* Reset default spacing */
+    html, body {
       margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #0ea5e9;
-      color: white;
+      padding: 0;
+      height: 100%;
       font-family: Arial, sans-serif;
     }
-    .loading {
-      font-size: 1.5rem;
-      animation: pulse 1.5s infinite;
+
+    /* Full page iframe */
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100vh;
+      display: block;
     }
-    @keyframes pulse {
-      0%, 100% { opacity: 0.5; }
-      50% { opacity: 1; }
+
+    /* Optional loading background */
+    body {
+      background: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   </style>
 </head>
 <body>
-  <div class="loading">Loading ATC Roster...</div>
-
-  <script>
-    // Replace with your Google Apps Script Web App URL
-    window.location.href = "https://script.google.com/macros/s/AKfycbzbMwLHui1qO3BocBjxZ6JQoZdJIbJbgYhvhSIrTfyov0cRlI4adHFKuaTfQ_74zo-Edg/exec";
-  </script>
+  <!-- Embed Apps Script Web App -->
+  <iframe src="https://script.google.com/macros/s/AKfycbzbMwLHui1qO3BocBjxZ6JQoZdJIbJbgYhvhSIrTfyov0cRlI4adHFKuaTfQ_74zo-Edg/exec" 
+          loading="lazy">
+  </iframe>
 </body>
 </html>
-
